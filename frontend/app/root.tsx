@@ -10,13 +10,6 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
-import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client/core/core.cjs";
-
-const client = new ApolloClient({
-  link: new HttpLink({ uri: "http://localhost:8081/graphql" }),
-  cache: new InMemoryCache(),
-});
-
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
